@@ -2,7 +2,7 @@ import fitz  # PyMuPDF
 import tempfile
 from openai import OpenAI
 import os
-
+import streamlit as st
 #client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 CHUNK_SIZE = 50

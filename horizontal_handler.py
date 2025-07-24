@@ -4,7 +4,7 @@ import os
 import time
 from dotenv import load_dotenv
 from openai import OpenAI, RateLimitError
-
+import streamlit as st
 load_dotenv()
 #client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
