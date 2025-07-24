@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 import json
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 CHUNK_SIZE = 50  # pages per chunk
 
 def split_and_upload_pdf(pdf_path: str, output_json="saved_file_ids.json"):

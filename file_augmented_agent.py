@@ -6,8 +6,8 @@ import tempfile
 import time
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 CHUNK_SIZE = 50  # Number of pages per chunk
 PROMPT_TEMPLATE = """
 You are a market analyst. Based on the PDF content provided, extract a table of key market insights (e.g. CAGR, market size, top companies, segmentation, trends).

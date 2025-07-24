@@ -4,7 +4,8 @@ from dotenv import load_dotenv
 import fitz  # PyMuPDF
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def upload_pdf_to_openai(pdf_path: str) -> str:
     with open(pdf_path, "rb") as f:

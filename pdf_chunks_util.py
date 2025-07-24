@@ -6,7 +6,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 CHUNK_SIZE = 50  # Pages per chunk
 
 def split_pdf_to_chunks(file, chunk_size=CHUNK_SIZE):

@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 from pdf_chunks_util import split_pdf_to_chunks
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def compare_uploaded_pdfs(pdf_files: list, user_prompt: str) -> dict:
     results = {}

@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 import time
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 PROMPT_TEMPLATE = """
 You are a market research analyst.
 Only answer from the content in the provided file.

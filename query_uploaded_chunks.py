@@ -2,8 +2,8 @@ import time
 from openai import OpenAI
 import os
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 def query_chunks(query: str, file_id_chunks: list) -> str:
     full_response = ""
     for chunk in file_id_chunks:
